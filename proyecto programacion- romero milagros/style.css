@@ -1,0 +1,39 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #b1d5ff;
+}
+h1 {
+    text-align: center;
+    color:rgb(1, 0, 63)
+}
+table {
+    background-color: #7fa1e0;
+    margin-left: 380px;
+    width: 40%;
+}
+#form1 {
+    color: white;
+    background-color: #5f93e2;
+    width: 60%;
+    margin-left: 280px;
+
+}
+#form2 {
+    color: white;
+    background-color: #5186d4;
+    width: 60%;
+    margin-left: 280px;
+}
+input {
+    border-radius: 5px;
+}
+#boton {
+    background-color: #c8fff0;
+}
+thead {
+    background-color: #244a9c;
+    color: white
+}
+tbody, tfoot {
+    color: white
+}

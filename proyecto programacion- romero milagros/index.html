@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>proyecto</title>
     <script src="romero.js"></script>
-    <link href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
             <input type="text" id="curso"><br>
             <label>fecha de emision:</label>
             <input type="date" id="fecha"><br>
-            <input type="button" value="cargar" onclick="cargardatos()">
+            <input id="boton" type="button" value="cargar" onclick="cargardatos()">
         </fieldset>
     </form>
     <form id="form2">
@@ -29,10 +29,10 @@
             <label>nombre de la materia:</label>
             <input type="text" id="materia"><br>
             <label>nota 1er cuatrimestre:</label>
-            <input type="number" id="nota1"><br>
+            <input type="number" id="nota1" min="1" max="10"><br>
             <label>nota 2do cuatrimestre:</label>
-            <input type="number" id="nota2"><br>
-            <input type="button" value="cargar al boletin" onclick="cargarnotas()">
+            <input type="number" id="nota2" min="1" max="10"><br>
+            <input id="boton" type="button" value="cargar al boletin" onclick="cargarnotas()">
         </fieldset>
     </form>
 
@@ -46,12 +46,17 @@
                 <th>materia</th>
                 <th>nota 1er cuatrimestre</th>
                 <th>nota 2do cuatrimestre</th>
-                <th>promedio anual</th>
+                <th>promedio</th>
             </tr>
         </thead>
         <tbody class="madre">
-            
+
         </tbody>
+        <tfoot>
+            <tr> 
+                <th id="pfinal"> </th>
+            </tr>
+        </tfoot>
     </table>
 </body>
 
