@@ -26,21 +26,23 @@ function cargarnotas() {
     let materia= document.getElementById("materia").value;
     let nota1= document.getElementById("nota1").value;
     let nota2= document.getElementById("nota2").value;
-    let promedio=parseFloat(nota1+nota2/2);
 
     //crear filas del boletin
+    let madre = document.querySelector('.madre');
     let tr = document.createElement('tr');
     let td1 = document.createElement('td');
     let td2 = document.createElement('td');
     let td3 = document.createElement('td');
-    let td4 = document.createElement("td");
+    let td4 = document.createElement('td');
 
     td1.innerHTML = materia;
     td2.innerHTML = nota1;
     td3.innerHTML = nota2;
-    td4.innerHTML = promedio;
+    td4.innerHTML = 
 
-    tr.appendChild(td1, td2, td3, td4);
-    
-
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    tr.appendChild(td4);
+    madre.appendChild(tr);
 }
