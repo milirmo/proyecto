@@ -32,6 +32,10 @@ function cargardatos() {
                 //eliminar formulario al rellenar datos
                 let formulario1 = document.getElementById("form1");
                 formulario1.remove();
+
+                //habilitar boton 
+                let btnnotas = document.getElementById("botonnotas");
+                btnnotas.disabled = false;
             }
         }
     }
@@ -47,38 +51,52 @@ function cargarnotas() {
     let nota2 = parseInt(document.getElementById("nota2").value);
     let prom = 0;
 
-    //crear filas del boletin
-    let madre = document.querySelector('.madre');
-    let tr = document.createElement('tr');
-    let td1 = document.createElement('td');
-    let td2 = document.createElement('td');
-    let td3 = document.createElement('td');
-    let td4 = document.createElement('td');
-    prom = (nota1 + nota2) / 2
-    td1.innerHTML = materia;
-    td2.innerHTML = nota1;
-    td3.innerHTML = nota2;
-    td4.innerHTML = prom;
+    if (!materia) {
+        alert("ingrese MATERIA para continuar.");
+    } else {
+        if (!nota1) {
+            alert("ingrese NOTA 1ER TRIMESTRE para continuar.");
+        } else {
+            if (!nota2) {
+                alert("ingrese NOTA 2DO TRIMESTRE para continuar.");
+            } else {
+                //crear filas del boletin
+                let madre = document.querySelector('.madre');
+                let tr = document.createElement('tr');
+                let td1 = document.createElement('td');
+                let td2 = document.createElement('td');
+                let td3 = document.createElement('td');
+                let td4 = document.createElement('td');
+                prom = (nota1 + nota2) / 2
+                td1.innerHTML = materia;
+                td2.innerHTML = nota1;
+                td3.innerHTML = nota2;
+                td4.innerHTML = prom;
 
-    tr.appendChild(td1);
-    tr.appendChild(td2);
-    tr.appendChild(td3);
-    tr.appendChild(td4);
-    madre.appendChild(tr);
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tr.appendChild(td4);
+                madre.appendChild(tr);
 
-    sumaprom += prom
+                sumaprom += prom
 
-    //calculo de promedio final
-    promfinal = (sumaprom / divisor);
-    divisor++
+                //calculo de promedio final
+                promfinal = (sumaprom / divisor);
+                divisor++
 
-    //mostrar promedio final
-    document.getElementById("pfinal").textContent = ("promedio final: " + promfinal);
+                //mostrar promedio final
+                document.getElementById("pfinal").textContent = ("promedio final: " + promfinal);
+            }
+        }
+    }
 }
 
 function imprimir() {
     let formulario2 = document.getElementById("form2");
     formulario2.remove();
+    let botonimprimir = document.getElementById("botonimprimir");
+    botonimprimir.remove();
 
     window.print();
 }

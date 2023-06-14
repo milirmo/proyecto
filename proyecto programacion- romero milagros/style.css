@@ -36,7 +36,7 @@ table {
 input {
     border-radius: 5px;
 }
-#boton {
+.boton {
     background-color: #244a9c;
     border-color: #244a9c;
     color: white;

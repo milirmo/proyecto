@@ -22,7 +22,7 @@
             <input type="text" id="curso"><br>
             <label>fecha de emision:</label>
             <input type="date" id="fecha"><br>
-            <input id="boton" type="button" value="cargar" onclick="cargardatos()">
+            <input class="boton" type="button" value="cargar" onclick="cargardatos()">
         </fieldset>
     </form>
 
@@ -35,7 +35,7 @@
             <input type="number" id="nota1" min="1" max="10"><br>
             <label>nota 2do cuatrimestre:</label>
             <input type="number" id="nota2" min="1" max="10"><br>
-            <input id="boton" type="button" value="cargar al boletin" onclick="cargarnotas()">
+            <input class="boton" id="botonnotas" type="button"  disabled value="cargar al boletin" onclick="cargarnotas()">
         </fieldset>
     </form>
 
@@ -62,7 +62,7 @@
         </tfoot>
     </table>
     <form id="form3">
-        <input id="boton" type="button" value="imprimir boletin" onclick="imprimir()">
+        <input class="boton" id="botonimprimir" type="button" value="imprimir boletin" onclick="imprimir()">
     </form>
 </body>
 
