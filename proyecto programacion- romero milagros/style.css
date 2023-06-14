@@ -1,26 +1,35 @@
 body {
     font-family:'Times New Roman', Times, serif;
-    background-color: #b1d5ff;
+    background-color: #0e2041;
 }
 h1 {
     text-align: center;
-    color:rgb(1, 0, 63)
+    color: azure;
+}
+h2 {
+    text-align: center;
+    color: azure;
+    margin-bottom: 30px;
 }
 table {
     background-color: #7fa1e0;
-    margin-left: 380px;
-    width: 40%;
+    margin-left: 280px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 60%;
 }
 #form1 {
     color: white;
-    background-color: #5f93e2;
+    background-color: #567db8;
     width: 60%;
     margin-left: 280px;
 
 }
 #form2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
     color: white;
-    background-color: #5186d4;
+    background-color: #567db8;
     width: 60%;
     margin-left: 280px;
 }
@@ -28,12 +37,23 @@ input {
     border-radius: 5px;
 }
 #boton {
-    background-color: #c8fff0;
+    background-color: #244a9c;
+    border-color: #244a9c;
+    color: white;
 }
-thead {
+thead, tfoot {
     background-color: #244a9c;
     color: white
 }
-tbody, tfoot {
-    color: white
+tbody{
+    color: white;
+}
+p {
+    color: azure;
+}
+img {
+    width: 100px;
+    margin-left:100px;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }

@@ -3,24 +3,40 @@ function cargardatos() {
     let nombre = document.getElementById("nombre").value;
     let curso = document.getElementById("curso").value;
     let fecha = document.getElementById("fecha").value;
+    if (nombre === "") {
+        alert("es necesario ingresar NOMBRE Y APELLIDO.");
+    } else {
+        if (curso === "") {
+            alert("es necesario ingresar CURSO.");
+        } else {
+            if (fecha === "") {
+                alert("es necesario ingresar FECHA DE EMISION.");
+            } else {
+                // crear elementos
+                let name = document.createElement('p'); //creas elemento que queremos.
+                let elementopadre = document.querySelector('.padre'); //seleccionas el padre (con class).
+                elementopadre.appendChild(name); //agregas nodo.
+                let parrafonombre = document.createTextNode('nombre y apellido: ' + nombre); //creas texto que quieras que aparezca en el navegador.
+                name.appendChild(parrafonombre); //pegas el texto creado.
 
-    // crear elementos
-    let name = document.createElement('p'); //creas elemento que queremos.
-    let elementopadre = document.querySelector('.padre'); //seleccionas el padre (con class).
-    elementopadre.appendChild(name); //agregas nodo.
-    let parrafonombre = document.createTextNode('nombre y apellido: ' + nombre); //creas texto que quieras que aparezca en el navegador.
-    name.appendChild(parrafonombre); //pegas el texto creado.
+                let curse = document.createElement('p');
+                elementopadre.appendChild(curse);
+                let parrafocurso = document.createTextNode('curso: ' + curso);
+                curse.appendChild(parrafocurso);
 
-    let curse = document.createElement('p');
-    elementopadre.appendChild(curse);
-    let parrafocurso = document.createTextNode('curso: ' + curso);
-    curse.appendChild(parrafocurso);
+                let date = document.createElement('p');
+                elementopadre.appendChild(date);
+                let parrafofecha = document.createTextNode('fecha: ' + fecha);
+                date.appendChild(parrafofecha);
 
-    let date = document.createElement('p');
-    elementopadre.appendChild(date);
-    let parrafofecha = document.createTextNode('fecha: ' + fecha);
-    date.appendChild(parrafofecha);
+                //eliminar formulario al rellenar datos
+                let formulario1 = document.getElementById("form1");
+                formulario1.remove();
+            }
+        }
+    }
 }
+
 let promfinal = 0;
 let sumaprom = 0;
 let divisor = 1;
@@ -57,5 +73,12 @@ function cargarnotas() {
     divisor++
 
     //mostrar promedio final
-    document.getElementById("pfinal").textContent=("promedio final: "+promfinal);
+    document.getElementById("pfinal").textContent = ("promedio final: " + promfinal);
+}
+
+function imprimir() {
+    let formulario2 = document.getElementById("form2");
+    formulario2.remove();
+
+    window.print();
 }
